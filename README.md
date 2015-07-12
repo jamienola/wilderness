@@ -24,13 +24,13 @@ Because of the way The Wilderness generates terrain, there is no practical limit
 
 Units will walk around obstacles such as water, rocks, lava, and snow. This was a challenge because in a world with infinitely-generating terrain it can be downright impossible to determine if a target location is inaccessible. 
 
-<a href="raw/master/img/pathfinding_1.png" target="_blank">
+<a href="/img/pathfinding_1.png" target="_blank">
 ![Before Pathfinding](https://github.com/jamienola/wilderness/raw/master/img/thumbs/pathfinding_1.png "Before Pathfinding")
 </a>
 
 The process of pathfinding has been slowed down in order to illustrate how it works. Starting at the unit location. tiles in eight directions are tested and compared to each other using a heavily modified A* algorithm that uses Jump Point Search to increase efficiency and accuracy. 
 
-<a href="raw/master/img/pathfinding_2.png" target="_blank">
+<a href="https://raw.githubusercontent.com/jamienola/wilderness/master/img/day_night_2.png" target="_blank">
 ![After Pathfinding](https://github.com/jamienola/wilderness/raw/master/img/thumbs/pathfinding_2.png "After Pathfinding")
 </a>
 
