@@ -9,7 +9,7 @@ The Wilderness is a procedurally-generated game world that extends infinitely in
 ## Live Demo
 
 Take a look at the documentation below, then click here to try it for yourself:
-http://www.jamienola.com/wilderness
+<a href="http://www.jamienola.com/wilderness" target="_blank">www.jamienola.com/wilderness</a>
 
 ## How to Use
 
