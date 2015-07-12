@@ -24,7 +24,7 @@ Because of the way The Wilderness generates terrain, there is no practical limit
 
 Units will walk around obstacles such as water, rocks, lava, and snow. This was a challenge because in a world with infinitely-generating terrain it can be downright impossible to determine if a target location is inaccessible. 
 
-<a href="/img/pathfinding_1.png" target="_blank">
+<a href="../raw/master/img/pathfinding_1.png" target="_blank">
 ![Before Pathfinding](https://github.com/jamienola/wilderness/raw/master/img/thumbs/pathfinding_1.png "Before Pathfinding")
 </a>
 
