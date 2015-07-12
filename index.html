@@ -21,20 +21,25 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="containter">
+        <div class="container">
             <div class="canvas-container" oncontextmenu="return false;" onmousedown="return false;" onmouseup="return false;" onclick="return false;" ondblclick="return false;">
                 <canvas id="bgCanvas" class="canvas" width="1280" height="720"></canvas>
                 <canvas id="canvas" class="canvas" width="1280" height="720"></canvas>
                 <canvas id="lightCanvas" class="canvas" width="1280" height="720"></canvas>
                 <canvas id="cursorCanvas" class="canvas" width="1280" height="720"></canvas>
             </div>
-            <div class="seed-container">
-              <input id="seed" type="input" placeholder="Seed"></input>
-              <button id="update-seed">Update Seed</button>
-            </div>
-            <div class="debug-container">
-              <p id="debug"></p>
-            </div>
+            <div class="controls">
+              <div class="debug-container">
+                <p id="debug"></p>
+              </div>
+              <div class="docs-container">
+                <a href="https://github.com/jamienola/wilderness/blob/master/README.md" target="_blank">Please read instructions on GitHub</a>
+              </div> 
+              <div class="seed-container">
+                <input id="seed" type="input" placeholder="Seed"></input>
+                <button id="update-seed">Update Seed</button>
+              </div>
+           </div>
         </div>
 
         <script type="text/javascript" src="lib/classes/basicClasses.js"></script>

@@ -62,9 +62,17 @@ textarea {
 
 
 
+@font-face {
+    font-family: openSansRegular;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
 
+body
+{
+  font-family: openSansRegular;
+}
 
-.containter
+.container
 {
   font-size: small;
   width: 1280px;
@@ -109,15 +117,51 @@ textarea {
     z-index: 3;
 }
 
+.controls
+{
+  width: 1280px;
+  position: relative;
+}
+
 .seed-container
 {
+  position: absolute;
+  pointer-events: none;
   width: 100%;
   text-align: center;
 }
 
+.seed-container button
+{
+  font-family: openSansRegular;
+  pointer-events: auto;
+}
+
+.seed-container input
+{
+  font-family: openSansRegular;
+  pointer-events: auto;
+}
+
+.docs-container
+{
+  float: right;
+}
+
+.docs-container a
+{
+  color: cornflowerblue;
+  font-size: 12pt;
+}
+
 .debug-container 
 {
-  margin-top: -30px;
+  float: left;
+}
+
+#debug
+{
+  margin: 0;
 }
 
 
