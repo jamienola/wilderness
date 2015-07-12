@@ -1,16 +1,20 @@
 # The Wilderness
   
-A personal prototype from 2013, when I was first teaching myself how to use JavaScript. 
+A personal prototype from 2013, when I was first teaching myself how to use JavaScript. Created primarily for learning the language, but also for testing terrain generation & pathfinding algorithms, designing and constructing a game engine, and optimizing rendering using an HTML5 canvas.
   
-**Note: While most of my professional work is on GitHub, it is all in private repositories which are owned by my employer. I am currently working on updating GitHub with more of my personal work in order to have more publically-accessible code samples.** 
+**Note: While most of my professional work is on GitHub, it is all in private repositories which are owned by my employer. I am currently working on updating GitHub with more of my personal work in order to have more publically-accessible code samples. This project is several years old and represents my skill set before using JavaScript professionally.**
   
 The Wilderness is a procedurally-generated game world that extends infinitely in every direction. Game units have a number of pathfinding behaviors to help them traverse the world and avoid obstacles.
 
 ## How to Use
 
-Interaction is very simple. Just click on a game unit to select it (it will turn white when you do), then right click where you want it to go. There are no limits on how far they can travel, but keep in mind the pathfinding algorithm is slowed down for demonstration purposes, so it may take a long time for larger distances.
+Interaction is very simple. Just click on a game unit to select it (it will turn white when you do), then right click where you want it to go. There are no limits on how far they can travel, but keep in mind the pathfinding algorithm is slowed down for demonstration purposes, so it may take a long time for larger distances. The unit on the left is selected, and the one on the right is not. If the player right-clicks anywhere on the game world, the left unit will begin to move.
 
-Clicking and dragging on the background will scroll the game world. If units are off-screen, arrows are added along the borders so players can't lose their units.
+<a href="https://raw.githubusercontent.com/jamienola/wilderness/master/img/units.png" target="_blank">
+![Game Units](https://github.com/jamienola/wilderness/raw/master/img/thumbs/units.png "Game Units")
+</a>
+
+Clicking and dragging on the background will scroll the game world. If units are off-screen, arrows are added along the borders so players can't lose their units. Arrows are colored the same as units, so figuring out which off-screen unit is selected is easy.
 
 ## Terrain Generation
 
@@ -64,9 +68,9 @@ In the morning, daylight begins to return at 6am and by 8am the world is fully l
 
 ## Rendering
 
-Tiles are only calculated and redrawn under certain circumstances. 
-1. When the player scrolls the screen, a bitmap image of the HTML canvas is copied, moved, and drawn back to the screen. Only tiles that are ouside this bitmap or along the borders need to be recaltulated, so scrolling around the world is very efficient.
-2. Tiles can be marked for updating while staying on the screen if they are near a light (or lit unit) and the world's lighting changes, or if a unit has that tile as a pathfinding target.
+World tiles are only calculated and redrawn under certain circumstances. 
+* When the player drags the screen, a bitmap image of the existing HTML5 canvas is copied into memory, moved, and written back to the canvas in the new location. Only tiles that are ouside this bitmap or along the borders need to be calculated and redrawn, so scrolling around the world is very efficient.
+* Tiles can be marked as needing an update while remaining on the screen if they are near a light (or lit unit) while the world's lighting is changing, if a lit unit is moving and gets close to the tile, or if a unit has the tile set as its pathfinding target.
 
 ## License
 
