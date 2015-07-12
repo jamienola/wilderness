@@ -26,13 +26,13 @@ Because of the way The Wilderness generates terrain, there is no practical limit
 
 ## Pathfinding
 
-Units will walk around obstacles such as water, rocks, lava, and snow. This was a challenge because in a world with infinitely-generating terrain it can be downright impossible to determine if a target location is inaccessible. 
+Units will walk around obstacles such as water, rocks, lava, and snow. This was a challenge because in a world with infinitely-generating terrain it can be downright impossible to determine if a target location is inaccessible. I put a lot of work into making the algorithm efficient and allowing it to take some key shortcuts to speed up calculation.
 
 <a href="https://raw.githubusercontent.com/jamienola/wilderness/master/img/pathfinding_1.png" target="_blank">
 ![Before Pathfinding](https://github.com/jamienola/wilderness/raw/master/img/thumbs/pathfinding_1.png "Before Pathfinding")
 </a>
 
-The process of pathfinding has been slowed down in order to illustrate how it works. Starting at the unit location. tiles in eight directions are tested and compared to each other using a heavily modified A* algorithm that uses Jump Point Search to increase efficiency and accuracy. 
+The process of pathfinding has been slowed down in order to illustrate how it works. Starting at the unit's location, tiles in eight directions are tested and compared to each other using a heavily modified A* algorithm that uses Jump Point Search to increase efficiency and accuracy. Once a tile has been checked, it is never checked again. The debug overview on the game shows which points have been checked, with lines coming from any preceeding points. The dark blue line is the path the unit decided to take.
 
 <a href="https://raw.githubusercontent.com/jamienola/wilderness/master/img/pathfinding_2.png" target="_blank">
 ![After Pathfinding](https://github.com/jamienola/wilderness/raw/master/img/thumbs/pathfinding_2.png "After Pathfinding")
