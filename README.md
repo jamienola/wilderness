@@ -24,11 +24,17 @@ Because of the way The Wilderness generates terrain, there is no practical limit
 
 Units will walk around obstacles such as water, rocks, lava, and snow. This was a challenge because in a world with infinitely-generating terrain it can be downright impossible to determine if a target location is inaccessible. 
 
+<a href="raw/master/img/pathfinding_1.png" target="_blank">
+![Before Pathfinding](https://github.com/jamienola/wilderness/raw/master/img/thumbs/pathfinding_1.png "Before Pathfinding")
+</a>
+
 The process of pathfinding has been slowed down in order to illustrate how it works. Starting at the unit location. tiles in eight directions are tested and compared to each other using a heavily modified A* algorithm that uses Jump Point Search to increase efficiency and accuracy. 
 
-![Before Pathfinding](/raw/master/img/pathfinding_1.png "Before Pathfinding")
+<a href="raw/master/img/pathfinding_2.png" target="_blank">
+![After Pathfinding](https://github.com/jamienola/wilderness/raw/master/img/thumbs/pathfinding_2.png "After Pathfinding")
+</a>
 
-![After Pathfinding](/raw/master/img/pathfinding_2.png "Before Pathfinding")
+Pathfinding nodes are drawn on the screen to illustrate what the algorithm is doing. In this example, the unit is trying to walk around a pond. The pathfinding algorithm progressively searches for an available path to the target location, which it finds by going around the South end of the pond. As you can see, if that way was blocked, it would have approached from the North.
 
 ## Lighting & Day/Night Cycle
 
