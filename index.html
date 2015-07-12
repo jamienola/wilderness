@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="lib/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="containter">
+            <div class="canvas-container" oncontextmenu="return false;" onmousedown="return false;" onmouseup="return false;" onclick="return false;" ondblclick="return false;">
+                <canvas id="bgCanvas" class="canvas" width="1280" height="720"></canvas>
+                <canvas id="canvas" class="canvas" width="1280" height="720"></canvas>
+                <canvas id="lightCanvas" class="canvas" width="1280" height="720"></canvas>
+                <canvas id="cursorCanvas" class="canvas" width="1280" height="720"></canvas>
+            </div>
+            <div class="seed-container">
+              <input id="seed" type="input" placeholder="Seed"></input>
+              <button id="update-seed">Update Seed</button>
+            </div>
+            <div class="debug-container">
+              <p id="debug"></p>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="lib/classes/basicClasses.js"></script>
+        <script type="text/javascript" src="lib/constants.js"></script>
+        <script type="text/javascript" src="lib/mathHelper.js"></script>
+        <script type="text/javascript" src="lib/classes/ship.js"></script>
+        <script type="text/javascript" src="lib/gameMode.js"></script>
+        <script type="text/javascript" src="lib/gameData.js"></script>
+        <script type="text/javascript" src="lib/classes/gameWorld.js"></script>
+        <script type="text/javascript" src="lib/inputHandler.js"></script>
+        <script type="text/javascript" src="lib/main.js"></script>
+    </body>
+</html>
