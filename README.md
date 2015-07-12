@@ -6,7 +6,10 @@ A personal prototype from 2013, when I was first teaching myself how to use Java
   
 The Wilderness is a procedurally-generated game world that extends infinitely in every direction. Game units have a number of pathfinding behaviors to help them traverse the world and avoid obstacles.
 
-#####Click here to try it for yourself: http://www.jamienola.com/wilderness
+## Live Demo
+
+Take a look at the documentation below, then click here to try it for yourself:
+http://www.jamienola.com/wilderness
 
 ## How to Use
 
